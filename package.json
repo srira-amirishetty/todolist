@@ -1,10 +1,14 @@
 {
+  "homepage": "https://srira-amirishetty.github.io/todolist",
   "name": "todolist-v1",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +18,9 @@
     "express": "^4.16.3",
     "lodash": "^4.17.11",
     "mongoose": "^5.13.22"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "webpack-cli": "^5.1.4"
   }
 }
